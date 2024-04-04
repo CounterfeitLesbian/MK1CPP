@@ -1,0 +1,9 @@
+<form (ngSubmit)="submitForm()">
+    <ion-item *ngFor="let course of courses; let i = index">
+      <ion-label>{{'Course ' + (i+1)}}</ion-label>
+      <ion-input type="number" [(ngModel)]="course.numGroups" placeholder="Number of Groups"></ion-input>
+      <ion-input type="number" [(ngModel)]="course.studentsPerGroup" placeholder="Students per Group"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit">Calculate</ion-button>
+  </form>
+  
